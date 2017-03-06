@@ -1,11 +1,22 @@
 #!groovy
 
-pipeline {
+ipeline {
     agent any
+
     stages {
-        stage('Example') {
+        stage('Build') {
             steps {
-                echo "Branch Demo1------Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
