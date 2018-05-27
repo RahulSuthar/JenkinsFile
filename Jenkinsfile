@@ -1,6 +1,6 @@
 #!groovy
 
-ipeline {
+pipeline {
     agent any
 
     stages {
