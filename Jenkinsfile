@@ -1,16 +1,24 @@
-#!groovy
-
 pipeline {
     agent any
     stages {
-        stage('Example') {
+        /* "Build" and "Test" stages omitted */
+
+        stage('Deploy - Staging') {
             steps {
-                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                sh './deploy staging'
+                sh './run-smoke-tests'
             }
         }
-        stage('Example sdsdfsfd') {
+
+        stage('Sanity check') {
             steps {
-                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                input "Does the staging environment look ok?"
+            }
+        }
+
+        stage('Deploy - Production') {
+            steps {
+                sh './deploy production'
             }
         }
     }
