@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Change from Remote Machine Building'
+                echo 'Change from Machine Building'
             }
         }
         stage('Test') {
