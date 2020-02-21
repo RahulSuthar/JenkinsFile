@@ -2,8 +2,9 @@ pipeline {
     agent any
     stages {
         stage('Build') {
-            notifyStarted()
+            
             steps {
+                notifyStarted()
                 echo 'Change from Machine Building'
             }
         }
