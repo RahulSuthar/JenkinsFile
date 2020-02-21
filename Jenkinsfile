@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
         stage('Build') {
-            
+            mmm
             steps {                
                 echo 'Change from Machine Building'
             }
