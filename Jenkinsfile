@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {                
-                echo 'Change from Machine Building'
+                echo 'Change from Machine Building to Machine Learning'
             }
         }
         stage('Test') {
